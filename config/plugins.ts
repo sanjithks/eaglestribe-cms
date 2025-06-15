@@ -3,9 +3,9 @@ export default ({ env }) => ({
     config: {
       provider: 'cloudinary',
       providerOptions: {
-        cloud_name: env('CLOUDINARY_NAME'),
-        api_key: env('CLOUDINARY_KEY'),
-        api_secret: env('CLOUDINARY_SECRET'),
+        cloud_name: env('diablculd'),
+        api_key: env('622796691278471'),
+        api_secret: env('sSDzMx_d01mVyK_2K_LY_rnT0Nk'),
       },
       actionOptions: {
         upload: {},
