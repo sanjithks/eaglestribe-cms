@@ -1,15 +1,13 @@
-export default ({ env }) => ({
+// ./config/plugins.ts
+
+export default () => ({
   upload: {
     config: {
-      provider: 'cloudinary',
+      provider: '@strapi/cloudinary',
       providerOptions: {
-        cloud_name: env('diablculd'),
-        api_key: env('622796691278471'),
-        api_secret: env('sSDzMx_d01mVyK_2K_LY_rnT0Nk'),
-      },
-      actionOptions: {
-        upload: {},
-        delete: {},
+        cloud_name: process.env.diablculd,
+        api_key: process.env.622796691278471,
+        api_secret: process.env.sSDzMx_d01mVyK_2K_LY_rnT0Nk,
       },
     },
   },
