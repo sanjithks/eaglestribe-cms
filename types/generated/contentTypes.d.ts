@@ -385,23 +385,50 @@ export interface ApiRideRide extends Struct.CollectionTypeSchema {
   };
   attributes: {
     author: Schema.Attribute.String;
+    boolean: Schema.Attribute.Boolean;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     detailed_write_up: Schema.Attribute.Text;
+    email: Schema.Attribute.Email;
     featured_image: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+    gallery_1: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    gallery_10: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    gallery_11: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    gallery_2: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    gallery_3: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    gallery_4: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    gallery_5: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    gallery_6: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    gallery_7: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    gallery_8: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    gallery_9: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    JSON: Schema.Attribute.JSON;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::ride.ride'> &
       Schema.Attribute.Private;
+    number_big_integer: Schema.Attribute.BigInteger;
+    number_decimal: Schema.Attribute.Decimal;
+    number_integer: Schema.Attribute.Integer;
+    password: Schema.Attribute.Password;
     publishedAt: Schema.Attribute.DateTime;
+    rich_text: Schema.Attribute.Blocks;
+    rich_text_markdown: Schema.Attribute.RichText;
     ride_date: Schema.Attribute.Date;
-    ride_gallery: Schema.Attribute.Media<
+    ride_multiple_media: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
     short_description: Schema.Attribute.Text;
+    slug_cover: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
